@@ -16,10 +16,10 @@ Vamos revisar as funções básicas de teste unitários e de integração.
 
 ## Após instalar o docker, seguir os passos a baixo, no terminal:
 
-1) Clonar o repositório na pasta de preferência, exemplo a seguir ir baixar na pasta workshop-test 
+1) Clonar o repositório na pasta de preferência: 
 git clone git@github.com:vmatteus/workshop-test.git ./workshop-test
 
-2) Subir o docker-compose
+2) Subir o docker-compose: 
 docker-compose up -d 
 
 3) Acessar no navegar ou postman para testar:
