@@ -14,5 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return '<center><h1>Workshop de testes - Appmax</h1></center>';
 });
