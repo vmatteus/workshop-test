@@ -23,3 +23,11 @@ Vamos revisar as funções básicas de teste unitários e de integração.
 3) Subir o docker-compose: docker-compose up -d 
 
 4) Acessar no navegar ou postman para testar: http://localhost:3335/
+
+## Dicas:
+
+- Acessar o container do php: docker exec -it workshop-php bash
+
+- Rodar todos os testes: php artisan test (Depois de entrar no container)
+
+- Rodar só um determinado grupo de testes php artisan test --filter=UserRepositoryTest
