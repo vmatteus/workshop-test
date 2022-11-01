@@ -27,6 +27,7 @@ Vamos revisar as funções básicas de teste unitários e de integração.
 5) **Rodar as migrações, dentro do container php:**
     1) docker exec -it workshop-php bash
     2) php artisan migrate
+    3) php artisan migrate --env=testing
     
 
 ## Dicas:
