@@ -16,25 +16,25 @@ Vamos revisar as funções básicas de teste unitários e de integração.
 
 ## Após instalar o docker, seguir os passos a baixo, no terminal:
 
-1) Clonar o repositório na pasta de preferência: git clone git@github.com:vmatteus/workshop-test.git ./workshop-test
+1) **Clonar o repositório na pasta de preferência:** git clone git@github.com:vmatteus/workshop-test.git ./workshop-test
 
-2) Ir na pasta workshop-test: cd ./workshop-test
+2) **Ir na pasta workshop-test:** cd ./workshop-test
 
-3) Subir o docker-compose: docker-compose up -d 
+3) **Subir o docker-compose:** docker-compose up -d 
 
-4) Acessar no navegar ou postman para testar: http://localhost:3335/
+4) **Acessar no navegar ou postman para testar:** http://localhost:3335/
 
-5) Rodar as migrações, dentro do container php:
+5) **Rodar as migrações, dentro do container php:**
     1) docker exec -it workshop-php bash
     2) php artisan migrate
     
 
 ## Dicas:
 
-- Acessar o container do php: docker exec -it workshop-php bash
+- **Acessar o container do php:** docker exec -it workshop-php bash
 
-- Rodar todos os testes: php artisan test (Depois de entrar no container)
+- **Rodar todos os testes:** php artisan test (Depois de entrar no container)
 
-- Rodar só um determinado grupo de testes php artisan test --filter=UserRepositoryTest
+- **Rodar só um determinado grupo de testes:** php artisan test --filter=UserRepositoryTest
 
-- Baixar os containers depois de subir: docker-compose down
+- **Baixar os containers depois de subir:** docker-compose down
