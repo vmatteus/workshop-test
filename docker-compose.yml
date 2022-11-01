@@ -6,12 +6,12 @@ services:
         container_name: workshop-php
         entrypoint: .docker/entrypoint.sh
         environment:
-        - COMPOSER_MEMORY_LIMIT=2G
-        - ENVIRONMENT=local
+            - COMPOSER_MEMORY_LIMIT=2G
+            - ENVIRONMENT=local
         volumes:
-        - .:/var/www
+            - .:/var/www
         networks:
-        - workshop-network
+            - workshop-network
         user: "1000:www-data"
     nginx:
         build: .docker/nginx
@@ -19,13 +19,29 @@ services:
         restart: always
         tty: true
         ports:
-        - 3335:80
+            - 3335:80
         volumes:
-        - .:/var/www
+            - .:/var/www
         networks:
-        - workshop-network
+            - workshop-network
         depends_on:
-        - php-fpm
+            - php-fpm
+    mysql:
+        build: .docker/mysql
+        command: --innodb-use-native-aio=0 --default-authentication-plugin=mysql_native_password
+        container_name: workshop-mysql
+        platform: linux/amd64
+        restart: always
+        tty: true
+        ports:
+            - 3334:3306
+        volumes:
+            - ./.docker/mysql/dbdata:/var/lib/mysql
+            - ./.docker/mysql/scripts:/docker-entrypoint-initdb.d
+        networks:
+            - workshop-network
+        environment:
+            - MYSQL_ROOT_PASSWORD=root
 
 networks:
   workshop-network:
