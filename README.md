@@ -10,7 +10,7 @@ Vamos revisar as funções básicas de teste unitários e de integração.
 - Docker 
 - Docker Compose
 
-## Quais linguagêns vamos usar?
+## Quais linguagens vamos usar?
 
 - PHP com Framework Laravel. 
 
