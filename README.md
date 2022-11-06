@@ -7,10 +7,9 @@ Vamos revisar as funções básicas de teste unitários e de integração.
 
 ## Dependências
 
-- Docker 
-- Docker Compose
+- Docker (https://docs.docker.com/get-docker/)
 
-## Quais linguagêns vamos usar?
+## Quais linguagens vamos usar?
 
 - PHP com Framework Laravel. 
 
@@ -20,22 +19,15 @@ Vamos revisar as funções básicas de teste unitários e de integração.
 
 2) **Ir na pasta workshop-test:** cd ./workshop-test
 
-3) **Subir o docker-compose:** docker-compose up -d 
+3) **Rodar o first-install:** make first-install (esperar rodar tudo)
 
 4) **Acessar no navegar ou postman para testar:** http://localhost:3335/
-
-5) **Rodar as migrações, dentro do container php:**
-    1) docker exec -it workshop-php bash
-    2) php artisan migrate
-    3) php artisan migrate --env=testing
     
 
 ## Dicas:
 
-- **Acessar o container do php:** docker exec -it workshop-php bash
+- **Subir o ambiente, após o first install:** make up
 
-- **Rodar todos os testes:** php artisan test (Depois de entrar no container)
+- **Baixar o ambiente:** make down
 
-- **Rodar só um determinado grupo de testes:** php artisan test --filter=UserRepositoryTest
-
-- **Baixar os containers depois de subir:** docker-compose down
+- **Rodar os testes:** make test 
