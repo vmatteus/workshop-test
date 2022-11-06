@@ -30,4 +30,4 @@ Vamos revisar as funções básicas de teste unitários e de integração.
 
 - **Baixar o ambiente:** make down
 
-- **Rodar os testes:** make test (depois digitar 1, pra todar tudo)
+- **Rodar os testes:** make test 
