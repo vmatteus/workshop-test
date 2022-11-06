@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit;
+namespace Tests\Unit\Repositories;
 
 use App\Models\User;
 use App\Repositories\Contracts\UserRepositoryInterface;
@@ -20,8 +20,6 @@ class UserRepositoryTest extends TestCase
 
     }
 
-
-
     /**
      * A basic test example.
      *
@@ -30,11 +28,18 @@ class UserRepositoryTest extends TestCase
     public function test_create_user()
     {
 
-        $this->assertInstanceOf(User::class, $this->userRepository->create([
-            'email' => 'dqwdq@dwqdq.com',
-            'name' => 'Vini',
-            'password' => '123'
-        ]));
+        $userData = [
+            'email' => 'email@email.com',
+            'name' => 'João Silva',
+            'password' => '123456'
+        ];
+
+        $user = $this->userRepository->create($userData);
+
+        $this->assertInstanceOf(User::class, $user);
+        $this->assertEquals($userData['email'], $user->email);
+        $this->assertEquals($userData['name'], $user->name);
+        $this->assertEquals($userData['password'], $user->password);
 
     }
 }

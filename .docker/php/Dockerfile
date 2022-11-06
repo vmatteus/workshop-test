@@ -6,8 +6,8 @@ RUN apk add --no-cache openssl bash mysql-client
 RUN docker-php-ext-install pdo pdo_mysql
 
 RUN apk add --no-cache $PHPIZE_DEPS \
-	&& pecl install xdebug \
-	&& docker-php-ext-enable xdebug \
+	# && pecl install xdebug \
+	# && docker-php-ext-enable xdebug \
 	&& docker-php-ext-install calendar
 
 RUN apk add --update --no-cache \
