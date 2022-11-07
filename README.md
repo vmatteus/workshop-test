@@ -31,3 +31,7 @@ Vamos revisar as funções básicas de teste unitários e de integração.
 - **Baixar o ambiente:** make down
 
 - **Rodar os testes:** make test 
+
+- **Erros relacionados a timeout rodar de novo o:**  make first-install
+
+- **Erro relacionado a "Plataform":** comentar o "platform: linux/amd64" do docker-compose.yml.
