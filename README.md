@@ -34,4 +34,4 @@ Vamos revisar as funções básicas de teste unitários e de integração.
 
 - **Erros relacionados a timeout rodar de novo o:**  make first-install
 
-- **Erro relacionado a "Plataform", comentar o "platform: linux/amd64" do docker-compose.yml.
+- **Erro relacionado a "Plataform":** comentar o "platform: linux/amd64" do docker-compose.yml.
