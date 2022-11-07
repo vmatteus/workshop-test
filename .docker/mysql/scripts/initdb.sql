@@ -1,2 +1,2 @@
-CREATE DATABASE IF NOT EXISTS workshop-test;
-CREATE DATABASE IF NOT EXISTS workshop-test-testing;
+CREATE DATABASE IF NOT EXISTS workshop_test;
+CREATE DATABASE IF NOT EXISTS workshop_test_testing;
