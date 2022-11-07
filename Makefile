@@ -1,5 +1,3 @@
-include .env
-
 help: 	 		## Show this help.
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
 
@@ -14,6 +12,9 @@ down: 	 		## Down all docker containers.
 
 refresh:  		## Put down, rebuild and up all docker containers.
 	@bash ./.docker/scripts/refresh.sh
+
+refresh-install:  		## Put down, rebuild and up all docker containers.
+	@bash ./.docker/scripts/refresh-install.sh
 
 in: 	        	## Show user a list of avaliable docker containers to go inside like root.
 	@bash ./.docker/scripts/in-root.sh
