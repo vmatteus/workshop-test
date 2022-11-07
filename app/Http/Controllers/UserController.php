@@ -2,30 +2,29 @@
 
 namespace App\Http\Controllers;
 
-use App\Repositories\Contracts\UserRepositoryInterface;
-use App\Repositories\UserRepository;
+use App\Services\UserService;
 use Illuminate\Http\Request;
-use Illuminate\Http\Resources\Json\JsonResource;
-
 class UserController extends Controller
 {
 
-    private $userRepository;
+    private $userService;
 
-    public function __construct(UserRepositoryInterface $userRepository)
+    public function __construct(UserService $userService)
     {
-        $this->userRepository = $userRepository;
+        $this->userService = $userService;
     }
 
+    /**
+     * @var Request $request
+     * @return User|\Exception
+     */
     public function create(Request $request) {
-
-        info('UserController.create');
-
-        $this->userRepository->create($request->all());
 
         return [
             'success'=> true,
-            'msg' => 'UserController.create'
+            'msg' => 'UserController.create',
+            'user' => $this->userService->create($request->all())
         ];
+
     }
 }

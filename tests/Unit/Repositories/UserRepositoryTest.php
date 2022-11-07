@@ -3,7 +3,6 @@
 namespace Tests\Unit\Repositories;
 
 use App\Models\User;
-use App\Repositories\Contracts\UserRepositoryInterface;
 use App\Repositories\UserRepository;
 use Tests\TestCase;
 
@@ -20,11 +19,6 @@ class UserRepositoryTest extends TestCase
 
     }
 
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
     public function test_create_user()
     {
 

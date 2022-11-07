@@ -2,7 +2,6 @@
 
 namespace App\Repositories;
 
-use App\Repositories\Contracts\FindUserByIdRepository;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\User;
 use App\Repositories\Contracts\UserRepositoryInterface;
