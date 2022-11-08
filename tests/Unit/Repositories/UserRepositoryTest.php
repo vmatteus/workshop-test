@@ -14,9 +14,7 @@ class UserRepositoryTest extends TestCase
     public function setUp() : void
     {
         parent::setUp();
-
         $this->userRepository = app(UserRepository::class);
-
     }
 
     public function test_create_user()
