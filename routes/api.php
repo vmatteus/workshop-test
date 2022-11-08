@@ -20,4 +20,4 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
-Route::post('/user/create', [UserController::class, 'create']);
+Route::post('/user/create', [UserController::class, 'create'])->name('create-user');;

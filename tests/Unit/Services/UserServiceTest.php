@@ -20,8 +20,8 @@ class UserServiceTest extends TestCase
     {
 
         $userData = [
-            'email' => 'email@email.com',
-            'name' => 'João Silva',
+            'email' => fake()->name(),
+            'name' => fake()->email(),
             'password' => '123456'
         ];
 

@@ -20,11 +20,25 @@ class UserController extends Controller
      */
     public function create(Request $request) {
 
-        return [
-            'success'=> true,
-            'msg' => 'UserController.create',
-            'user' => $this->userService->create($request->all())
-        ];
+        $data = $request->all();
 
+        $validator = validator($data, [
+            'name' => 'required',
+            'email' => 'required|email|unique:users|email',
+            'password' => 'required|size:6',
+        ]);
+
+        if (!$validator->fails($validator)) {
+            return [
+                'success'=> true,
+                'msg' => 'Usuário criado!',
+                'user' => $this->userService->create($data)
+            ];
+        } else {
+            return [
+                'success'=> false,
+                'errors' => $validator->errors(),
+            ];
+        }
     }
 }
